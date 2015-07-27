@@ -1,0 +1,8 @@
+<h1>Where's My Bus?</h1>
+
+<p>Choose your station from the list below, then click "Where's My Bus?"</p>
+
+<%= form_tag("/pages/yourBuses", method: "post") do %>
+<%= select_tag "station", options_for_select(MARTAapp: :Application.config.stations) %>
+<%= submit_tag("Where's My Bus?") %>
+<% end %>
